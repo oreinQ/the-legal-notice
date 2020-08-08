@@ -16,15 +16,27 @@ app.use(express.static(path.join(__dirname, "views")));
 app.use("/api", api);
 
 app.get("/", (req, res) => {
-  res.render("home", { title: "Home"});
+  res.render("home", { title: "Home" });
 });
 
 app.get("/blogs", (req, res) => {
   axios.get("http://localhost:5000/api/posts/new").then((response) => {
     const { data } = response;
-    console.log(data.data)
-    res.render("posts", { title: "Blog", data : data.data });
+    console.log(data.data);
+    res.render("posts", { title: "Blog", data: data.data });
   });
+});
+
+app.get("/:password", (req, res)=> {
+  const { password } = req.params;
+  if (password && password === "248895") {
+    res.render("formPosts")
+  } else {
+    res.json({
+      status : "failure",
+      message : "404 Not Found"
+    });
+  }
 });
 
 app.listen(PORT, () => {

@@ -14,15 +14,17 @@ mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true }, (err,
   console.log("Connected...")
 })
 
-route.get("/posts", (req, res) => {
-  // const { name , posts } = req.body;
-  const { name, posts } = data;
-  const newArticle = new Posts({
-    name,
-    posts,
-  });
-  newArticle.save();
-  res.redirect("/");
+route.post("/posts", (req, res) => {
+  const { name , posts, title } = req.body;
+  console.log(req.body, name , posts, title)
+  // const { name, posts } = data;
+  // const newArticle = new Posts({
+  //   name,
+  //   title,
+  //   posts,
+  // });
+  // newArticle.save();
+  // res.redirect("/");
 });
 
 route.get("/posts/new", (req, res) => {
