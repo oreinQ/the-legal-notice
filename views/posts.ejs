@@ -1,0 +1,21 @@
+<div class="bg-img w-100">
+    <div class="container m-lg-5">
+        <div class="w-100">
+            <div class="row">
+                <% for(var i=0; i < data.length; i++) { %>
+                <div class="mx-auto col-10 p-3 text-center">
+                    <div class="card w-100 bg-light shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= data[i].name%></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text"><%= data[i].posts%></p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+</div>

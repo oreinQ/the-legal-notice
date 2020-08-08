@@ -1,0 +1,55 @@
+/* For Blue  */
+.tm-color-brand {
+  color: #67a1f7 !important;
+}
+.btn-bg {
+  color: white;
+  background: #67b2f7;
+  background: linear-gradient(90deg, #71b7f8 0%, #67a1f7 49%, #6787f7 100%);
+  font-size: 15px;
+}
+.blue-bg {
+  color: white;
+  background: #67b2f7;
+  background: linear-gradient(90deg, #71b7f8 0%, #67a1f7 49%, #6787f7 100%);
+}
+.btn-bg:hover {
+  color: white;
+  -webkit-box-shadow: -1px 1px 15px -6px #67a1f7;
+  -moz-box-shadow: -1px 1px 15px -6px #67a1f7;
+  box-shadow: -1px 1px 15px -6px #67a1f7;
+}
+.btn-bg:focus {
+  outline: none;
+  -webkit-box-shadow: -1px 1px 15px -6px #67a1f7;
+  -moz-box-shadow: -1px 1px 15px -6px #67a1f7;
+  box-shadow: -1px 1px 15px -6px #67a1f7;
+}
+.btn-bg:active {
+  outline: none;
+  box-shadow: none;
+}
+.form-control:active {
+  outline: none;
+  box-shadow: none;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.focus-none:active {
+  outline: none;
+  box-shadow: none;
+}
+.focus-none:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.shadow-custom {
+  -webkit-box-shadow: -1px 1px 15px -6px #67a1f7;
+  -moz-box-shadow: -1px 1px 15px -6px #67a1f7;
+  box-shadow: -1px 1px 15px -6px #67a1f7;
+}
+/* Blue End  */

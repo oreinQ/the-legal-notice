@@ -1,0 +1,35 @@
+/* For Yellow  */
+.tm-color-brand {
+    color : #feca4c !important;
+}
+.btn-bg {
+    color : white;
+    background: #fdd068;
+    background: linear-gradient(90deg, #fad275 0%, #feca4c 49%, #ffbe25 100%); 
+    font-size : 15px;
+}
+.btn:hover {
+    color : white;
+    -webkit-box-shadow: -1px 1px 15px -6px #feca4c;
+    -moz-box-shadow: -1px 1px 15px -6px #feca4c;
+    box-shadow: -1px 1px 15px -6px #feca4c;
+}
+.btn:focus {
+    outline: none;
+    -webkit-box-shadow: -1px 1px 15px -6px #feca4c;
+    -moz-box-shadow: -1px 1px 15px -6px #feca4c;
+    box-shadow: -1px 1px 15px -6px #feca4c;
+}
+.btn:active {
+    outline: none;
+    box-shadow : none;
+}
+.shadow-custom {
+    -webkit-box-shadow: -1px 1px 15px -6px #feca4c;
+    -moz-box-shadow: -1px 1px 15px -6px #feca4c;
+    box-shadow: -1px 1px 15px -6px #feca4c;
+}
+.link-primary:hover {
+    color : #feca4c;
+}
+/* Yellow End  */

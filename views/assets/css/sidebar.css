@@ -1,0 +1,22 @@
+#sidebar {
+  max-width: 250px;
+  min-width: 250px;
+  height: 100vh;
+  transition: all 0.4s;
+}
+#wrapper {
+  max-width: 250px;
+  min-width: 250px;
+  height: 100vh;
+  transition: all 0.4s;
+}
+
+.toggle {
+  margin-left: -250px;
+}
+
+.hover-shadow:hover {
+  -webkit-box-shadow: 0px 3px 13px -6px #3d3d3dbf;
+  -moz-box-shadow: 0px 3px 13px -6px #3d3d3dbf;
+  box-shadow: 0px 3px 13px -6px #3d3d3dbf;
+}

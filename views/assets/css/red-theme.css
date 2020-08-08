@@ -1,0 +1,35 @@
+/* For Blue  */
+.tm-color-brand {
+    color : #fe4e59 !important;
+}
+.btn-bg {
+    color : white;
+    background: #fa5a65;
+    background: linear-gradient(90deg, #fc747d 0%, #fe4e59 49%, #ff4955 100%); 
+    font-size : 15px;
+}
+.btn:hover {
+    color : white;
+    -webkit-box-shadow: -1px 1px 15px -6px #fe4e59;
+    -moz-box-shadow: -1px 1px 15px -6px #fe4e59;
+    box-shadow: -1px 1px 15px -6px #fe4e59;
+}
+.btn:focus {
+    outline: none;
+    -webkit-box-shadow: -1px 1px 15px -6px #fe4e59;
+    -moz-box-shadow: -1px 1px 15px -6px #fe4e59;
+    box-shadow: -1px 1px 15px -6px #fe4e59;
+}
+.btn:active {
+    outline: none;
+    box-shadow : none;
+}
+.shadow-custom {
+    -webkit-box-shadow: -1px 1px 15px -6px #fe4e59;
+    -moz-box-shadow: -1px 1px 15px -6px #fe4e59;
+    box-shadow: -1px 1px 15px -6px #fe4e59;
+}
+.link-primary:hover {
+    color : #fe4e59;
+}
+/* Blue End  */
