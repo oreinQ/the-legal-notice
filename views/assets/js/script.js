@@ -1,8 +1,10 @@
-const sidebarBtn = document.getElementById('sidebar-btn');
-const bodyBtn = document.getElementById('sidebar-feature');
-const wrapper = document.getElementById('wrapper');
-const sidebar = document.getElementById('sidebar');
-const navItem = document.getElementById('nav-item');
+const sidebarBtn = document.getElementById("sidebar-btn");
+const bodyBtn = document.getElementById("sidebar-feature");
+const wrapper = document.getElementById("wrapper");
+const sidebar = document.getElementById("sidebar");
+const navItem = document.getElementById("nav-item");
+const dropdownBtn = document.getElementById("dropdown");
+const dropdownItems = document.getElementById("dropdown-items");
 
 const moreBtn1 = document.getElementById("member-1");
 const firstMember1 = document.getElementById("mem-1-s");
@@ -36,66 +38,102 @@ const moreBtn8 = document.getElementById("member-8");
 const firstMember8 = document.getElementById("mem-8-s");
 const secondMember8 = document.getElementById("mem-8");
 
-const handlerSidebar = () => {
-    wrapper.classList.toggle("toggle");
-    sidebar.classList.toggle("toggle");
-    bodyBtn.classList.toggle("opacity")
-}      
+const searchValue = document.getElementById("search");
 
-const HandlerBodyToggle = () => {
-    wrapper.classList.add("toggle");
-    sidebar.classList.add("toggle");
-    bodyBtn.classList.remove("opacity")
-}
+// const searchFromValue = async () => {
+//     const value = searchValue.value; 
+//     const response = await fetch("http://localhost:5000/api/posts/v1", {method : "GET"} , {search : value});
+//       console.log(response.json());
+// }
+
+const handlerSidebar = () => {
+  wrapper.classList.toggle("toggle");
+  sidebar.classList.toggle("toggle");
+  bodyBtn.classList.toggle("opacity");
+};
+
+const handlerBodyToggle = () => {
+  wrapper.classList.add("toggle");
+  sidebar.classList.add("toggle");
+  bodyBtn.classList.remove("opacity");
+};
+
+const handlerDropdown = () => {
+  dropdownItems.classList.toggle("show");
+};
 
 const handlerCardToggle1 = () => {
-    firstMember1.classList.toggle("d-none");
-    secondMember1.classList.toggle("d-none");
-}
+  firstMember1.classList.toggle("d-none");
+  secondMember1.classList.toggle("d-none");
+};
 
 const handlerCardToggle2 = () => {
-    firstMember2.classList.toggle("d-none");
-    secondMember2.classList.toggle("d-none");
-}
+  firstMember2.classList.toggle("d-none");
+  secondMember2.classList.toggle("d-none");
+};
 
 const handlerCardToggle3 = () => {
-    firstMember3.classList.toggle("d-none");
-    secondMember3.classList.toggle("d-none");
-}
+  firstMember3.classList.toggle("d-none");
+  secondMember3.classList.toggle("d-none");
+};
 
 const handlerCardToggle4 = () => {
-    firstMember4.classList.toggle("d-none");
-    secondMember4.classList.toggle("d-none");
-}
+  firstMember4.classList.toggle("d-none");
+  secondMember4.classList.toggle("d-none");
+};
 
 const handlerCardToggle5 = () => {
-    firstMember5.classList.toggle("d-none");
-    secondMember5.classList.toggle("d-none");
-}
+  firstMember5.classList.toggle("d-none");
+  secondMember5.classList.toggle("d-none");
+};
 
 const handlerCardToggle6 = () => {
-    firstMember6.classList.toggle("d-none");
-    secondMember6.classList.toggle("d-none");
-}
+  firstMember6.classList.toggle("d-none");
+  secondMember6.classList.toggle("d-none");
+};
 
 const handlerCardToggle7 = () => {
-    firstMember7.classList.toggle("d-none");
-    secondMember7.classList.toggle("d-none");
-}
+  firstMember7.classList.toggle("d-none");
+  secondMember7.classList.toggle("d-none");
+};
 
 const handlerCardToggle8 = () => {
-    firstMember8.classList.toggle("d-none");
-    secondMember8.classList.toggle("d-none");
+  firstMember8.classList.toggle("d-none");
+  secondMember8.classList.toggle("d-none");
+};
+
+sidebarBtn.addEventListener("click", handlerSidebar);
+bodyBtn.addEventListener("click", handlerBodyToggle);
+dropdownBtn.addEventListener("click", handlerDropdown);
+
+if (moreBtn1) {
+  moreBtn1.addEventListener("click", handlerCardToggle1);
 }
 
-sidebarBtn.addEventListener("click", handlerSidebar)
-bodyBtn.addEventListener("click", HandlerBodyToggle)
+if (moreBtn2) {
+  moreBtn2.addEventListener("click", handlerCardToggle2);
+}
 
-moreBtn1.addEventListener("click", handlerCardToggle1)
-moreBtn2.addEventListener("click", handlerCardToggle2)
-moreBtn3.addEventListener("click", handlerCardToggle3)
-moreBtn4.addEventListener("click", handlerCardToggle4)
-moreBtn5.addEventListener("click", handlerCardToggle5)
-moreBtn6.addEventListener("click", handlerCardToggle6)
-moreBtn7.addEventListener("click", handlerCardToggle7)
-moreBtn8.addEventListener("click", handlerCardToggle8)
+if (moreBtn3) {
+  moreBtn3.addEventListener("click", handlerCardToggle3);
+}
+
+if (moreBtn4) {
+  moreBtn4.addEventListener("click", handlerCardToggle4);
+}
+
+if (moreBtn5) {
+  moreBtn5.addEventListener("click", handlerCardToggle5);
+}
+
+if (moreBtn6) {
+  moreBtn6.addEventListener("click", handlerCardToggle6);
+}
+
+if (moreBtn7) {
+  moreBtn7.addEventListener("click", handlerCardToggle7);
+}
+
+if (moreBtn8) {
+  moreBtn8.addEventListener("click", handlerCardToggle8);
+}
