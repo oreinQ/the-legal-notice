@@ -1,10 +1,15 @@
-<div class="bg-white w-100 p-4">
+<div class="bg-img w-100 p-lg-4">
     <div class="container m-lg-5">
         <div class="w-100">
             <div class="m-auto col-lg-6 col-12">
-                <form method="POST" action="/api/posts/v2">
-                    <div class="input-group mb-3">
-                        <input type="text" name="search" class="form-control rounded-left border-0 bg-light"
+                <div class="m-auto text-center text-secondary p-3 my-5">
+                    <a class="btn btn-bg border-0 p-4 m-2 shadow-sm mx-3 text-light" id="article-btn" href="?category=Article" data-toggle="tooltip" data-placement="top" title="Article" ><span class="material-icons-outlined p-1">assignment</span></a>
+                    <a class="btn btn-bg border-0 p-4 m-2 shadow-sm mx-3 text-light" id="brief-btn" href="?category=Case+Brief" data-toggle="tooltip" data-placement="top" title="Case Brief"><span class="material-icons-outlined p-1">dns</span></a>
+                    <a class="btn btn-bg border-0 p-4 m-2 shadow-sm mx-3 text-light" id="comments-btn" href="?category=Case+Comments" data-toggle="tooltip" data-placement="top" title="Case Comments"><span class="material-icons-outlined p-1">description</span></a>
+                </div>
+                <form method="GET" action="/blogs">
+                    <div class="input-group rounded bg-light p-1 mb-3">
+                        <input type="text" name="search" id="search-posts" autocomplete="off" onkeyup="handlerSearch()" class="form-control rounded-left border-0 bg-light"
                             placeholder="Search title">
                         <div class="input-group-append">
                             <button class="btn bg-light focus-none" type="submit">
@@ -16,30 +21,20 @@
                 </form>
             </div>
             <% for(var i=0; i < data.length; i++) { %>
-            <div class="mx-auto col-lg-9 col-12 m-4">
-                <div class="card w-100 blue-bg text-light shadow border-0">
+            <div class="mx-auto col-lg-14 col-12 my-5 mx-4">
+                <div class="card w-100 bg-light text-secondary shadow border-0">
                     <div class="card-body p-2">
                         <div class="text-left dropdown">
-                            <a class="btn btn-white text-light p-0 m-0 focus-none" id="dropdown">
+                            <a onclick="handlerDropdown(data._id)" class="btn btn-white text-secondary p-0 m-0 focus-none" id="dropdown">
                                 <span class="material-icons">
                                     hdr_weak
                                 </span>
                             </a>
-                            <div id="dropdown-items" class="dropdown-menu border-0 p-0 shadow bg-white">
-                                <a class="dropdown-item p-2 text-secondary p-3 rounded d-flex" href="#"><span
-                                        class="material-icons-outlined px-1">
-                                        delete_outline
-                                    </span>Delete</a>
-                                <a class="dropdown-item p-2 text-secondary p-3 rounded d-flex" href="#"><span
-                                        class="material-icons-outlined px-1">
-                                        create
-                                    </span>Edit</a>
-                            </div>
                         </div>
-                        <div class="h5 card-text text-light py-0 p-3">
-                            <div class="card-title h4 text-center text-light w-100"><%= data[i].title%></div>
+                        <div class="h5 text-justify card-text m-3 text-secondary py-0 p-lg-3">
+                            <div class="card-title h4 text-center text-secondary w-100"><%= data[i].title%></div><hr>
                             <%= data[i].posts%>
-                            <p class="text-right h6"><i>by <b><%= data[i].name%></b></i></p>
+                            <p class="text-right h6 p-2"><i><%= data[i].category%> by <b><%= data[i].name%></b></i></p>
                         </div>
                     </div>
                 </div>

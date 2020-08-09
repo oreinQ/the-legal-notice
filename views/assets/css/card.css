@@ -47,7 +47,7 @@
 
 
 .opacity {
-  transition : all 0.4s;
-  opacity: 0.4;
-  background-color: black;
+  transition : all 0.2s;
+  opacity: 0.2;
+
 }

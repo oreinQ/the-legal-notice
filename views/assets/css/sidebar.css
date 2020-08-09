@@ -24,3 +24,7 @@
 #dropdown-items {
   transition : all 0.7s;
 }
+
+.text-justify {
+  text-align: justify !important;
+}

@@ -1,4 +1,5 @@
 const express = require("express");
+const axios = require("axios");
 const route = express.Router();
 const mongoose = require("mongoose");
 require("../model/posts");
@@ -14,24 +15,21 @@ mongoose.connect(
 );
 
 route.post("/posts", (req, res) => {
-  const { name, posts, title } = req.body;
+  res.setHeader("Content-Type", "text/plain");
+  const { name, posts, title, category } = req.body;
   // const { name, posts } = data;
   const newArticle = new Posts({
     name,
     title,
+    category,
     posts,
   });
   newArticle.save();
   res.redirect("/blogs");
 });
 
-route.post("/posts/v2", (req, res) => {
-  const { search } = req.body;
-  console.log(search);
-  res.redirect('/blogs');
-});
-
 route.get("/posts/v1", (req, res) => {
+  res.setHeader("Content-Type", "text/plain");
   Posts.find({}).then((response) =>
     res.json({
       status: "success",

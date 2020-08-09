@@ -28,10 +28,35 @@ app.get("/", (req, res) => {
 
 app.get("/blogs", (req, res) => {
   axios.get("http://localhost:5000/api/posts/v1").then((response) => {
+    const { search, category } = req.query;
     const { data } = response;
-    res.render("posts", { title: "Blog", data: data.data });
+    const newData = data.data;
+    if(category) {
+      const json = newData.filter(event=> {
+        return event.category === category;
+      });
+      res.render("posts", { title: "Blog" , data : json });     
+    }
+
+    if(search) {
+      const json = newData.filter(event=> {
+        // Use Includes for random search in string
+        return event.title.toLowerCase().includes(search.toLowerCase());
+      })
+      res.render("posts", { title: "Blog" , data : json });
+    } else {
+      res.render("posts", { title: "Blog" , data : newData });
+    }
   });
 });
+
+app.get("/test-ejs",(req,res)=> {
+  axios.get("http://localhost:5000/api/posts/v1").then((response) => {
+    const { data } = response;
+    const newData = data.data;
+    res.render("test", {title : "Blogs", data : newData})
+  })
+})
 
 app.get("/:password", (req, res)=> {
   const { password } = req.params;
