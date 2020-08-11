@@ -12,8 +12,8 @@ const postSchema = new Schema({
         required : true
     },
     category : {
-        type : String,
-        required : true
+        _id : String,
+        name : String
     },
     posts : {
         type : String,
