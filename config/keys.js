@@ -1,3 +1,5 @@
-module.exports = {
-    mongoURI : "mongodb+srv://orein:chirag248895@orein.vrwer.mongodb.net/Orein?retryWrites=true&w=majority"
+if (process.env.NODE_ENV === 'production') {
+    module.exports = require('./prod');
+} else {
+    module.exports = require('./dev');
 }

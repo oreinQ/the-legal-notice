@@ -20,9 +20,7 @@ mongoose.connect(
 );
 
 route.post("/posts", (req, res) => {
-  res.setHeader("Content-Type", "text/plain");
   const { name, posts, title, category } = req.body;
-  // const { name, posts } = data;
 
   const newArticle = new Posts({
     name,

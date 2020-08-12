@@ -6,6 +6,8 @@ const api = require("./routes/apiRoute");
 const axios = require("axios").default;
 const PORT = process.env.PORT || 5000;
 
+console.log(process.env)
+
 const bodyParser = require("body-parser");
 
 // parse application/x-www-form-urlencoded
